@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Login</title>
+</head>
+<body>
+    <h2>Simple Login</h2>
+
+    <form>
+        <label>Username:</label>
+        <input type="text" id="username">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "1234") {
+                document.getElementById("message").innerHTML =
+                    "Login Successful!";
+            } else {
+                document.getElementById("message").innerHTML =
+                    "Invalid Username or Password";
+            }
+        }
+    </script>
+</body>
+</html>
